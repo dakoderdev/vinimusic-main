@@ -353,29 +353,31 @@ const productos = [
   },
   {
     nombre: "Greatest Hits",
-    precio: 95000,
+    precio: 87000,
     img: "vinyl-GreatestHits.webp",
     artista: "The Police",
-    descripcion: "Álbum icónico del rock barrial argentino (1999), con himnos urbanos y energía cruda.",
-    generos: ["rock"],
+    descripcion:
+      "Compilado de 1992 que reúne los mayores éxitos de The Police, incluyendo 'Every Breath You Take', 'Roxanne' y 'Message in a Bottle'.",
+    generos: ["new wave", "rock", "pop rock"],
     destacado: true,
   },
   {
     nombre: "Sheer Heart Attack",
-    precio: 92800,
-    img: "vinyl-SheerHeartAttack.jpg",
+    precio: 93000,
+    img: "vinyl-sheerheartattack.jpg",
     artista: "Queen",
-    descripcion: "Álbum icónico del rock barrial argentino (1999), con himnos urbanos y energía cruda.",
-    generos: ["rock"],
+    descripcion:
+      "Tercer álbum de Queen (1974), conocido por su energía glam y temas como 'Killer Queen' y 'Now I'm Here'. Mezcla rock teatral con hard rock.",
+    generos: ["rock", "glam rock", "hard rock"],
     destacado: true,
   },
   {
-    nombre: "oktubre",
-    precio: 185500,
+    nombre: "Oktubre",
+    precio: 97000,
     img: "vinyl-oktubre.webp",
     artista: "Patricio Rey y sus Redonditos de Ricota",
-    descripcion: "Álbum icónico del rock barrial argentino (1999), con himnos urbanos y energía cruda.",
-    generos: ["rock"],
-    destacado: true,
+    descripcion:
+      "Obra fundamental del rock argentino (1986). De tono político y oscuro, con clásicos como 'Ji Ji Ji' y 'Motor Psico'.",
+    generos: ["rock argentino", "post-punk", "alternativo"]
   },
 ]
