@@ -149,17 +149,14 @@ h2 {
 
 @keyframes confirm-buy {
   0% {
-    transform: scale(1);
     background-color: #8f295c;
     border-radius: var(--bs-border-radius);
   }
-  50% {
-    transform: scale(1.05);
+  30%, 70% {
     background-color: #13b52b;
     border-radius: 1.5rem;
   }
   100% {
-    transform: scale(1);
     background-color: #e6509b;
     border-radius: var(--bs-border-radius);
   }
@@ -329,6 +326,10 @@ table {
     transform: translateY(0);
     color: var(--bs-nav-link-hover-color);
   }
+}
+
+.nav-link {
+  cursor: pointer;
 }
 
 .carrito-jump {
