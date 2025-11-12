@@ -20,9 +20,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto text-center">
           <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="index.html#sobreNosotros">Sobre Nosotros</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#contacto">Contacto</a></li>
           <li class="nav-item">
-            <a id="carritoButton" data-bs-toggle="offcanvas" href="#offcanvas" class="nav-link px-3">
+            <a id="carritoButton" class="nav-link px-3">
               <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
                   fill="none" stroke="currentColor" stroke-width="0.2" 
                   class="bi bi-cart3" viewBox="0 0 16 16">
@@ -113,7 +114,7 @@
       <h5 class="offcanvas-title" id="offcanvasLabel">Carrito</h5>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div id="offcanvas" class="offcanvas-body">
+    <div id="offcanvasEl" class="offcanvas-body">
       <div class="container my-5">
         <div id="carritoLista" class="table-responsive"></div>
         <div class="text-center mt-4">
@@ -125,6 +126,39 @@
     </div>
     </div>
   </div>
+  <section id="sobreNosotros" class="about-section">
+    <div class="about-container">
+      <div class="about-header">
+        <h2 class="about-title">Sobre Nosotros</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-turntable-icon lucide-turntable"><path d="M10 12.01h.01"/><path d="M18 8v4a8 8 0 0 1-1.07 4"/><circle cx="10" cy="12" r="4"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </div>
+          <p class="about-text">
+            <strong>Vinimusic</strong> es una tienda especializada en vinilos de alta calidad, dedicada a ofrecerte los mejores discos para coleccionistas y amantes del sonido analógico.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake-icon lucide-heart-handshake"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>
+          </div>
+          <p class="about-text">
+            En 2024, abrimos este negocio para traerte música y experiencias únicas. Cada vinilo en nuestro catálogo es de alta calidad y mantenido cuidadosamente.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+          </div>
+          <p class="about-text">
+            Nosotros nos encargamos de que tu vinilo llegue en perfectas condiciones. Tenemos un servicio de atención al cliente dedicado a ayudarte en cualquier duda o problema en el trayecto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer id="contacto" class="footer">
     <div class="footer-container">
       <div class="footer-grid">

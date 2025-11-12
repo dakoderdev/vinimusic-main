@@ -1,5 +1,6 @@
-const USER_STORAGE_KEY = "loggedInUser"
-const carrito = JSON.parse(localStorage.getItem("carrito")) || []
+let carrito = []
+let openCartAfterLogin = false
+let loggedUser = null // sesión temporal
 
 const lista = document.getElementById("listaProductos")
 let productosMostrados = 9
@@ -57,6 +58,12 @@ function clickCard(e) {
 document.addEventListener("click", clickCard)
 
 function agregarAlCarrito(id) {
+  if (!loggedUser) {
+    showLoginModal()
+    openCartAfterLogin = false
+    return
+  }
+
   const productoBase = productos[id - 1]
   if (!productoBase) return
   const item = carrito.find((p) => p.id === id)
@@ -66,8 +73,17 @@ function agregarAlCarrito(id) {
     carrito.push({ ...productoBase, id, cantidad: 1 })
   }
   mostrarCarrito()
-  localStorage.setItem("carrito", JSON.stringify(carrito))
   animarCarrito()
+
+  const boton = document.querySelector(`.agregar[data-id="${id}"]`)
+  if (boton) {
+    boton.classList.add("animando")
+    boton.style.animation = "confirm-buy 0.6s ease"
+    setTimeout(() => {
+      boton.style.animation = ""
+      boton.classList.remove("animando")
+    }, 600)
+  }
 }
 
 function abrirDetalle(id) {
@@ -75,26 +91,55 @@ function abrirDetalle(id) {
   window.location.href = `details.html?id=${id}`
 }
 
+// --- LOGIN / CARRITO ---
 const form = document.getElementById("loginForm")
 const error = document.getElementById("loginError")
-const loginButton = document.getElementById("loginButton")
+const carritoButton = document.getElementById("carritoButton")
+const offcanvasEl = document.getElementById("offcanvas")
+const loginModalEl = document.getElementById("loginModal")
 const bootstrap = window.bootstrap
 
-function loginSubmit(e) {
-  e.preventDefault()
-  const user = document.getElementById("usuario").value.trim()
-  const pass = document.getElementById("clave").value.trim()
-  if (!user || !pass) {
-    error.textContent = "Debes ingresar usuario y contraseña."
-    return
-  }
-  localStorage.setItem(USER_STORAGE_KEY, user)
-  error.textContent = ""
-  const modalElement = document.getElementById("loginModal")
-  const modal = bootstrap.Modal.getInstance(modalElement)
-  modal.hide()
+const offcanvasInstance = offcanvasEl ? new bootstrap.Offcanvas(offcanvasEl) : null
+const loginModalInstance = bootstrap.Modal.getOrCreateInstance(loginModalEl)
+
+function isLogged() {
+  return Boolean(loggedUser)
 }
-form.addEventListener("submit", loginSubmit)
+
+function showLoginModal() {
+  loginModalInstance.show()
+}
+
+if (carritoButton) {
+  carritoButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    if (!isLogged()) {
+      openCartAfterLogin = true
+      showLoginModal()
+      return
+    }
+    if (offcanvasInstance) offcanvasInstance.show()
+  })
+}
+
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const user = document.getElementById("usuario").value.trim()
+    const pass = document.getElementById("clave").value.trim()
+    if (!user || !pass) {
+      error.textContent = "Debes ingresar usuario y contraseña."
+      return
+    }
+    loggedUser = user // sesión temporal
+    error.textContent = ""
+    loginModalInstance.hide()
+    if (openCartAfterLogin && offcanvasInstance) {
+      offcanvasInstance.show()
+      openCartAfterLogin = false
+    }
+  })
+}
 
 const contenedor = document.getElementById("carritoLista")
 
@@ -137,8 +182,6 @@ function mostrarCarrito() {
 }
 mostrarCarrito()
 
-const carritoButton = document.getElementById("carritoButton")
-
 function animarCarrito() {
   carritoButton.classList.add("carrito-jump")
   setTimeout(() => carritoButton.classList.remove("carrito-jump"), 600)
@@ -147,24 +190,43 @@ function animarCarrito() {
 const vaciarButton = document.getElementById("vaciar")
 const comprarButton = document.getElementById("comprar")
 
-function vaciarCarrito() {
-  localStorage.removeItem("carrito")
-  location.reload()
+function requireLoginBefore(actionFn) {
+  return (e) => {
+    if (!isLogged()) {
+      e.preventDefault()
+      openCartAfterLogin = false
+      showLoginModal()
+      return
+    }
+    actionFn(e)
+  }
 }
-vaciarButton.addEventListener("click", vaciarCarrito)
-comprarButton.addEventListener("click", vaciarCarrito)
 
+if (vaciarButton) {
+  vaciarButton.addEventListener("click", requireLoginBefore(() => {
+    carrito = []
+    mostrarCarrito()
+  }))
+}
+
+if (comprarButton) {
+  comprarButton.addEventListener("click", requireLoginBefore(() => {
+    carrito = []
+    mostrarCarrito()
+    if (offcanvasInstance) offcanvasInstance.hide()
+    alert("Compra simulada. Gracias por tu compra 🎉")
+  }))
+}
+
+// --- CARRUSEL ---
 function renderCarousel() {
   const carouselInner = document.getElementById("carouselInner")
   const carouselIndicators = document.getElementById("carouselIndicators")
   if (!carouselInner || !carouselIndicators) return
-
   let destacados = productos.filter((p) => p.destacado)
   destacados = destacados.sort(() => Math.random() - 0.5).slice(0, 5)
-
   carouselInner.innerHTML = ""
   carouselIndicators.innerHTML = ""
-
   destacados.forEach((prod, index) => {
     const id = productos.indexOf(prod) + 1
     const slide = document.createElement("a")
@@ -185,12 +247,12 @@ function renderCarousel() {
     if (index === 0) indicator.className = "active"
     carouselIndicators.appendChild(indicator)
   })
-
   const carouselElement = document.getElementById("carouselExample")
   new bootstrap.Carousel(carouselElement, { interval: 4000, ride: "carousel" })
 }
 renderCarousel()
 
+// --- FILTROS ---
 const verMasBtn = document.getElementById("verMasBtn")
 
 function aplicarFiltroActivo() {
@@ -217,22 +279,17 @@ if (verMasBtn) {
 }
 
 const contenedorFiltros = document.getElementById("filtrosGenero")
-
 const todosLosGeneros = productos.flatMap((p) =>
   p.generos.map((g) => g.toLowerCase().trim())
 )
-
 const conteo = {}
 for (const genero of todosLosGeneros) {
   conteo[genero] = (conteo[genero] || 0) + 1
 }
-
 const generosOrdenados = Object.entries(conteo)
   .sort((a, b) => b[1] - a[1])
   .map(([genero]) => genero)
-
 let generosUnicos = ["todos", ...generosOrdenados.slice(0, 10)]
-
 
 contenedorFiltros.innerHTML = generosUnicos
   .map(
@@ -245,7 +302,6 @@ contenedorFiltros.innerHTML = generosUnicos
   .join("")
 
 const botonesFiltro = document.querySelectorAll(".btn-filtro")
-
 botonesFiltro.forEach((btn) => {
   btn.addEventListener("click", () => {
     botonesFiltro.forEach((b) => b.classList.remove("activo"))
