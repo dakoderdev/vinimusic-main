@@ -1,4 +1,5 @@
 const productos = [
+  const productos = [
   {
     nombre: "Brat",
     precio: 125000,
@@ -7,7 +8,7 @@ const productos = [
     descripcion:
       "El sexto álbum de estudio de Charli XCX (2024). Un proyecto electropop agresivo y satírico que mezcla club, trance y experimentación sonora, explorando la fama y la autenticidad.",
     generos: ["electropop", "hyperpop", "pop", "dance", "experimental"],
-    destacado: true, // Agregado campo destacado
+    destacado: true,
   },
   {
     nombre: "The Life of a Showgirl",
@@ -15,8 +16,8 @@ const productos = [
     img: "vinyl-showgirl.jpg",
     artista: "Taylor Swift",
     descripcion:
-      "El duodécimo álbum de estudio de Taylor Swift (2025). Continúa la línea introspectiva de 'The Tortured Poets Department', con influencias de synth‑pop y folk alternativo.",
-    generos: ["pop", "folk", "synth‑pop", "alternativo"],
+      "El duodécimo álbum de estudio de Taylor Swift (2025). Un retrato elegante y cinematográfico del estrellato y la feminidad, donde el pop alternativo se fusiona con sintetizadores nostálgicos y letras introspectivas.",
+    generos: ["pop", "folk", "synth-pop", "alternativo"],
   },
   {
     nombre: "Short n' Sweet Deluxe",
@@ -24,7 +25,7 @@ const productos = [
     img: "vinyl-shortsweetdeluxe.jpg",
     artista: "Sabrina Carpenter",
     descripcion:
-      "Versión deluxe del álbum 'Short n’ Sweet' (2024), con éxitos como 'Espresso' y 'Please Please Please'. Pop fresco con tintes disco y R&B.",
+      "Versión deluxe del álbum 'Short n’ Sweet' (2024), con éxitos como 'Espresso' y 'Please Please Please'. Pop fresco, coqueto y colorido con influencias disco y R&B.",
     generos: ["pop", "disco", "R&B"],
     destacado: true,
   },
@@ -36,7 +37,7 @@ const productos = [
     descripcion:
       "Lanzado en 2013, este disco marcó el salto global de la banda con un sonido más sensual y oscuro, influido por el R&B y el rock psicodélico.",
     generos: ["rock alternativo", "indie rock", "garage rock"],
-    destacado: true, // Agregado campo destacado
+    destacado: true,
   },
   {
     nombre: "Future Nostalgia",
@@ -44,9 +45,9 @@ const productos = [
     img: "vinyl-futurenostalgia.jpg",
     artista: "Dua Lipa",
     descripcion:
-      "Álbum ganador del Grammy (2020) que define el pop moderno con influencias de disco, funk y synth‑pop. Incluye los éxitos 'Don't Start Now' y 'Levitating'.",
+      "Álbum ganador del Grammy (2020) que define el pop moderno con influencias de disco, funk y synth-pop. Incluye los éxitos 'Don't Start Now' y 'Levitating'.",
     generos: ["pop", "disco", "funk", "dance"],
-    destacado: true, // Agregado campo destacado
+    destacado: true,
   },
   {
     nombre: "Norman Fucking Rockwell!",
@@ -56,14 +57,15 @@ const productos = [
     descripcion:
       "Aclamado álbum de 2019 con letras poéticas y melancólicas, producción de Jack Antonoff y una estética de California melancólica.",
     generos: ["indie", "rock alternativo", "alternative pop"],
-    destacado: true, // Agregado campo destacado
+    destacado: true,
   },
   {
     nombre: "Come Over When You're Sober, Pt. 1",
     precio: 110000,
     img: "vinyl-comesober.jpg",
     artista: "Lil Peep",
-    descripcion: "Disco debut (2017) del pionero del emo‑rap. Mezcla letras vulnerables con trap, punk y emo.",
+    descripcion:
+      "Disco debut (2017) del pionero del emo-rap. Mezcla letras vulnerables con trap, punk y emo, definiendo un género entero.",
     generos: ["emo rap", "trap", "alternativo"],
   },
   {
@@ -73,7 +75,7 @@ const productos = [
     artista: "Taylor Swift",
     descripcion:
       "El quinto álbum de Taylor Swift (2014) marcó su paso definitivo al pop, con himnos como 'Style', 'Blank Space' y 'Shake It Off'.",
-    generos: ["pop", "synth‑pop", "electropop"],
+    generos: ["pop", "synth-pop", "electropop"],
     destacado: true,
   },
   {
@@ -82,7 +84,7 @@ const productos = [
     img: "vinyl-starboy.jpg",
     artista: "The Weeknd",
     descripcion:
-      "Álbum de 2016 que consolidó el sonido futurista del artista, con colaboraciones de Daft Punk. Mezcla R&B, synth‑pop y electrónica.",
+      "Álbum de 2016 que consolidó el sonido futurista del artista, con colaboraciones de Daft Punk. Mezcla R&B, synth-pop y electrónica con una atmósfera nocturna.",
     generos: ["R&B", "electropop", "synthwave"],
   },
   {
@@ -91,8 +93,8 @@ const productos = [
     img: "vinyl-ballads1.webp",
     artista: "Joji",
     descripcion:
-      "Debut de Joji (2018). Un álbum introspectivo que explora la soledad y el amor desde una producción lo‑fi y minimalista.",
-    generos: ["lo‑fi", "R&B", "trip hop", "alternativo"],
+      "Debut de Joji (2018). Un álbum introspectivo que explora la soledad y el amor desde una producción lo-fi y minimalista.",
+    generos: ["lo-fi", "R&B", "trip hop", "alternativo"],
     destacado: true,
   },
   {
@@ -101,8 +103,8 @@ const productos = [
     img: "vinyl-desire.webp",
     artista: "Caroline Polachek",
     descripcion:
-      "Álbum de 2023 con producción art‑pop experimental, combinando synths exuberantes, voces etéreas y elementos de música celta.",
-    generos: ["art pop", "synth‑pop", "experimental"],
+      "Álbum de 2023 con producción art-pop experimental, combinando synths exuberantes, voces etéreas y elementos de música celta.",
+    generos: ["art pop", "synth-pop", "experimental"],
     destacado: true,
   },
   {
@@ -148,8 +150,8 @@ const productos = [
     img: "vinyl-hurry.webp",
     artista: "The Weeknd",
     descripcion:
-      "Rumoreado proyecto conceptual posterior a 'Dawn FM'. Explora el R&B futurista con sintetizadores oscuros y temas sobre la redención.",
-    generos: ["R&B", "synth‑pop", "electronica"],
+      "Proyecto conceptual posterior a 'Dawn FM' (2024). Explora un R&B futurista con sintetizadores oscuros y temas sobre la redención y la trascendencia.",
+    generos: ["R&B", "synth-pop", "electronica"],
     destacado: true,
   },
   {
@@ -157,8 +159,9 @@ const productos = [
     precio: 102000,
     img: "vinyl-manbestfriend.webp",
     artista: "Sabrina Carpenter",
-    descripcion: "EP conceptual que combina ironía y humor con melodías pop‑rock y producción elegante.",
-    generos: ["pop", "pop‑rock", "indie pop"],
+    descripcion:
+      "EP conceptual que combina ironía y humor con melodías pop-rock y producción elegante. Una carta de amor y sarcasmo en partes iguales.",
+    generos: ["pop", "pop-rock", "indie pop"],
     destacado: true,
   },
   {
@@ -167,7 +170,7 @@ const productos = [
     img: "vinyl-radicaloptimism.webp",
     artista: "Dua Lipa",
     descripcion:
-      "Álbum de 2024 inspirado en el britpop y el dance psicodélico. Una reinvención más orgánica tras 'Future Nostalgia'.",
+      "Álbum de 2024 inspirado en el britpop y el dance psicodélico. Una reinvención más orgánica y libre tras 'Future Nostalgia'.",
     generos: ["pop", "britpop", "dance"],
     destacado: true,
   },
@@ -177,7 +180,7 @@ const productos = [
     img: "vinyl-liveforever.webp",
     artista: "Lil Peep",
     descripcion:
-      "Mixtape póstuma (2015) con sonido emo‑trap crudo y melancólico. Incluye temas como 'Angeldust' y 'Haunt U'.",
+      "Mixtape póstuma (2015) con sonido emo-trap crudo y melancólico. Incluye temas como 'Angeldust' y 'Haunt U'.",
     generos: ["emo rap", "trap", "alternativo"],
   },
   {
@@ -185,7 +188,8 @@ const productos = [
     precio: 94000,
     img: "vinyl-ahivamos.png",
     artista: "Gustavo Cerati",
-    descripcion: "Disco de 2006 que marcó su regreso al rock energético. Incluye 'Crimen' y 'Adiós'.",
+    descripcion:
+      "Disco de 2006 que marcó su regreso al rock energético. Incluye clásicos como 'Crimen' y 'Adiós'.",
     generos: ["rock argentino", "alternativo", "pop rock"],
     destacado: true,
   },
@@ -194,7 +198,8 @@ const productos = [
     precio: 100000,
     img: "vinyl-bocanada.jpg",
     artista: "Gustavo Cerati",
-    descripcion: "Obra maestra de 1999 que fusiona electrónica y rock con una atmósfera onírica y sofisticada.",
+    descripcion:
+      "Obra maestra de 1999 que fusiona electrónica y rock con una atmósfera onírica y sofisticada.",
     generos: ["rock alternativo", "electrónica", "trip hop"],
     destacado: true,
   },
@@ -221,7 +226,8 @@ const productos = [
     precio: 100000,
     img: "vinyl-sodastereo.png",
     artista: "Soda Stereo",
-    descripcion: "Debut de 1984 que definió el sonido del pop‑rock latinoamericano de los 80.",
+    descripcion:
+      "Debut de 1984 que definió el sonido del pop-rock latinoamericano de los 80, con energía juvenil y estética moderna.",
     generos: ["pop rock", "new wave", "rock latino"],
     destacado: true,
   },
@@ -230,7 +236,8 @@ const productos = [
     precio: 110000,
     img: "vinyl-cancionanimal.webp",
     artista: "Soda Stereo",
-    descripcion: "Álbum de 1990, punto máximo de la banda. Incluye 'De Música Ligera' y 'Un Millón de Años Luz'.",
+    descripcion:
+      "Álbum de 1990, punto máximo de la banda. Incluye 'De Música Ligera' y 'Un Millón de Años Luz'.",
     generos: ["rock alternativo", "rock latino"],
   },
   {
@@ -247,7 +254,8 @@ const productos = [
     precio: 115000,
     img: "vinyl-elmalquerer.webp",
     artista: "Rosalia",
-    descripcion: "Obra conceptual (2018) que fusiona flamenco y pop contemporáneo. Ganador del Grammy Latino.",
+    descripcion:
+      "Obra conceptual (2018) que fusiona flamenco y pop contemporáneo. Ganador del Grammy Latino y referente del pop moderno español.",
     generos: ["flamenco", "pop", "experimental"],
     destacado: true,
   },
@@ -256,7 +264,8 @@ const productos = [
     precio: 100000,
     img: "vinyl-idon.webp",
     artista: "Don Omar",
-    descripcion: "Álbum de 2009 donde el artista combina reggaetón, electrónica y hip hop futurista.",
+    descripcion:
+      "Álbum de 2009 donde el artista combina reggaetón, electrónica y hip hop futurista, con un enfoque innovador para su tiempo.",
     generos: ["reggaetón", "electrónica", "urbano"],
   },
   {
@@ -264,7 +273,8 @@ const productos = [
     precio: 105000,
     img: "vinyl-bobmarley.webp",
     artista: "Bob Marley",
-    descripcion: "Compilación esencial de 1984 con los mayores éxitos de Bob Marley & The Wailers.",
+    descripcion:
+      "Compilación esencial de 1984 con los mayores éxitos de Bob Marley & The Wailers. Un homenaje a la paz y la resistencia.",
     generos: ["reggae", "roots", "ska"],
   },
   {
@@ -272,16 +282,18 @@ const productos = [
     precio: 93000,
     img: "vinyl-thealbum.webp",
     artista: "Blackpink",
-    descripcion: "Debut de 2020 del grupo surcoreano con éxitos como 'How You Like That' y 'Lovesick Girls'.",
-    generos: ["K‑pop", "pop", "hip hop"],
+    descripcion:
+      "Debut de 2020 del grupo surcoreano con éxitos como 'How You Like That' y 'Lovesick Girls'. Fusión explosiva de pop y hip hop.",
+    generos: ["K-pop", "pop", "hip hop"],
   },
   {
     nombre: "Whiplash",
     precio: 91000,
     img: "vinyl-whiplash.jpg",
     artista: "Aespa",
-    descripcion: "Álbum de 2024 que mezcla hyperpop, R&B y electrónica, continuando la estética futurista del grupo.",
-    generos: ["K‑pop", "hyperpop", "electropop"],
+    descripcion:
+      "Álbum de 2024 que mezcla hyperpop, R&B y electrónica, continuando la estética futurista del grupo.",
+    generos: ["K-pop", "hyperpop", "electropop"],
     destacado: true,
   },
   {
@@ -289,7 +301,8 @@ const productos = [
     precio: 90000,
     img: "vinyl-locura.jpg",
     artista: "Virus",
-    descripcion: "Álbum de 1985 con sonido new wave y letras cargadas de ironía y sensualidad.",
+    descripcion:
+      "Álbum de 1985 con sonido new wave y letras cargadas de ironía y sensualidad, ícono del pop argentino ochentoso.",
     generos: ["new wave", "rock argentino", "pop"],
   },
   {
@@ -297,15 +310,17 @@ const productos = [
     precio: 92000,
     img: "vinyl-karma.png",
     artista: "Stray Kids",
-    descripcion: "Mini‑álbum de 2024 con sonido industrial, rap intenso y producción dinámica.",
-    generos: ["K‑pop", "hip hop", "electronica"],
+    descripcion:
+      "Mini-álbum de 2024 con sonido industrial, rap intenso y producción dinámica. Energía pura y autoconfianza en estado sonoro.",
+    generos: ["K-pop", "hip hop", "electronica"],
   },
   {
     nombre: "Grandes Exitos Vilma Palma",
     precio: 99000,
     img: "vinyl-grandesexitos.png",
     artista: "Vilma Palma",
-    descripcion: "Colección de hits de la banda rosarina, incluyendo 'Auto Rojo' y 'La Pachanga'.",
+    descripcion:
+      "Colección de hits de la banda rosarina, incluyendo 'Auto Rojo' y 'La Pachanga'. Un repaso por el sonido fiestero de los 90.",
     generos: ["rock latino", "pop", "ska"],
   },
   {
@@ -313,7 +328,8 @@ const productos = [
     precio: 94500,
     img: "vinyl-beautifulchaos.webp",
     artista: "Katseye",
-    descripcion: "Álbum debut del grupo global Katseye (2024), mezcla de R&B y pop con producción internacional.",
+    descripcion:
+      "Álbum debut del grupo global Katseye (2024), mezcla de R&B y pop con producción internacional y energía juvenil.",
     generos: ["pop", "R&B", "dance"],
     destacado: true,
   },
@@ -322,15 +338,17 @@ const productos = [
     precio: 91500,
     img: "vinyl-thered.jpg",
     artista: "Red Velvet",
-    descripcion: "Primer álbum de estudio (2015) con enfoque en el pop colorido y experimental del grupo.",
-    generos: ["K‑pop", "dance", "R&B"],
+    descripcion:
+      "Primer álbum de estudio (2015) con enfoque en el pop colorido y experimental del grupo, definiendo su identidad dual.",
+    generos: ["K-pop", "dance", "R&B"],
   },
   {
     nombre: "Supersonico",
     precio: 97000,
     img: "vinyl-supersonico.png",
     artista: "Los Autenticos Decadentes",
-    descripcion: "Disco que combina ska, cumbia y rock, con el estilo festivo característico del grupo argentino.",
+    descripcion:
+      "Disco que combina ska, cumbia y rock, con el estilo festivo característico del grupo argentino.",
     generos: ["rock latino", "ska", "cumbia"],
     destacado: true,
   },
@@ -339,15 +357,17 @@ const productos = [
     precio: 93500,
     img: "vinyl-sanctuary.webp",
     artista: "TXT",
-    descripcion: "EP conceptual con temas de crecimiento emocional y autodescubrimiento, mezclando pop y R&B.",
-    generos: ["K‑pop", "pop", "R&B"],
+    descripcion:
+      "EP conceptual con temas de crecimiento emocional y autodescubrimiento, mezclando pop y R&B en un tono etéreo.",
+    generos: ["K-pop", "pop", "R&B"],
   },
   {
     nombre: "Rock",
     precio: 96500,
     img: "vinyl-rock.jpg",
     artista: "Viejas Locas",
-    descripcion: "Álbum icónico del rock barrial argentino (1999), con himnos urbanos y energía cruda.",
+    descripcion:
+      "Álbum icónico del rock barrial argentino (1999), con himnos urbanos, crudeza y energía callejera.",
     generos: ["rock argentino", "barrial", "alternativo"],
     destacado: true,
   },
