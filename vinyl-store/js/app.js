@@ -297,12 +297,22 @@ function aplicarFiltroActivo() {
             (g) => g.toLowerCase().replaceAll("-", "-").trim() === generoSeleccionado
           )
         )
-  renderProductos(productosFiltrados)
+      renderProductos(productosFiltrados)
 }
+
+
 
 function handleVerMasClick() {
   productosMostrados += 12
   aplicarFiltroActivo()
+}
+
+function cambiarTitulo(genero) {
+  const listaTitulo = document.getElementById("listaTitulo")
+  listaTitulo.textContent =
+    genero === "todos"
+      ? "Todos los Vinilos"
+      : `Todos los Vinilos de ${genero.charAt(0).toUpperCase() + genero.slice(1)}`
 }
 
 const verMasBtn = document.getElementById("verMasBtn")
@@ -338,6 +348,8 @@ function renderFiltros() {
       btn.classList.add("activo")
 
       const generoSeleccionado = btn.dataset.genero
+      const listaTitulo = document.getElementById("listaTitulo")
+      cambiarTitulo(generoSeleccionado)
       const productosFiltrados =
         generoSeleccionado === "todos"
           ? productos

@@ -472,5 +472,13 @@ const productos = [
     "Álbum de 1984 que consolidó a Bryan Adams como estrella global. Con temas como 'Summerof '69' y 'Heaven', mezcla rock melódico con baladas inolvidables.",
   generos: ["rock", "pop rock", "soft rock"]
 },
-
+{
+  nombre: "Armageddon",
+  precio: 108000,
+  img: "vinyl-armageddon.webp",
+  artista: "Aespa",
+  descripcion:
+    "Álbum de 1984 que consolidó a Bryan Adams como estrella global. Con temas como 'Summerof '69' y 'Heaven', mezcla rock melódico con baladas inolvidables.",
+  generos: ["K-pop", "hyperpop", "electropop"],
+},
 ]
