@@ -2,6 +2,8 @@
 let carrito = []
 let openCartAfterLogin = false
 let loggedUser = null
+const storedUser = sessionStorage.getItem("loggedUser")
+if (storedUser) loggedUser = storedUser
 
 // === PRODUCTOS ===
 let productosMostrados = 12
@@ -143,6 +145,7 @@ function handleLoginSubmit(e) {
   }
 
   loggedUser = user
+  sessionStorage.setItem("loggedUser", user)
   error.textContent = ""
 
   const loginModalInstance = bootstrap.Modal.getOrCreateInstance(loginModalEl)
