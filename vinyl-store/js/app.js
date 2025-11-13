@@ -4,7 +4,7 @@ let openCartAfterLogin = false
 let loggedUser = null
 
 // === PRODUCTOS ===
-let productosMostrados = 9
+let productosMostrados = 12
 
 function renderProductos(listaProductos = productos) {
   const lista = document.getElementById("listaProductos")
@@ -298,7 +298,7 @@ function aplicarFiltroActivo() {
 }
 
 function handleVerMasClick() {
-  productosMostrados += 9
+  productosMostrados += 12
   aplicarFiltroActivo()
 }
 
