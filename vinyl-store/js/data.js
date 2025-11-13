@@ -477,8 +477,7 @@ const productos = [
   precio: 108000,
   img: "vinyl-armageddon.webp",
   artista: "Aespa",
-  descripcion:
-    "Álbum de 1984 que consolidó a Bryan Adams como estrella global. Con temas como 'Summerof '69' y 'Heaven', mezcla rock melódico con baladas inolvidables.",
-  generos: ["K-pop", "hyperpop", "electropop"],
-},
+  descripcion: "El primer álbum de estudio del grupo femenino surcoreano Aespa, lanzado en mayo de 2024. Presenta diez temas, incluyendo los dos sencillos principales: 'Supernova' y 'Armageddon'. El álbum explora su concepto futurista con géneros como el K-pop, hyperpop y electropop.",
+  generos: ["K-pop", "hyperpop", "electropop"]
+}
 ]
