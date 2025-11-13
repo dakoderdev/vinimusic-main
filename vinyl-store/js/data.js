@@ -434,7 +434,8 @@ const productos = [
   artista: "The Rolling Stones",
   descripcion:
     "Publicado en 1971, es una de las cumbres de los Stones. Mezcla rock, blues y country con una energía sensual y rebelde. Contiene clásicos como 'Brown Sugar' y 'Wild Horses'.",
-  generos: ["rock", "blues rock", "hard rock"]
+  generos: ["rock", "blues rock", "hard rock"],
+  destacado: true,
 },
 {
   nombre: "Money for Nothing",
@@ -461,7 +462,8 @@ const productos = [
   artista: "AC/DC",
   descripcion:
     "Grabado en 1992, captura toda la potencia en vivo de AC/DC. Una descarga de energía pura con clásicos como 'Thunderstruck', 'Back in Black' y 'Highway to Hell'.",
-  generos: ["hard rock", "rock and roll", "live"]
+  generos: ["hard rock", "rock and roll", "live"],
+  destacado: true,
 },
 {
   nombre: "Reckless",
@@ -470,7 +472,8 @@ const productos = [
   artista: "Bryan Adams",
   descripcion:
     "Álbum de 1984 que consolidó a Bryan Adams como estrella global. Con temas como 'Summerof '69' y 'Heaven', mezcla rock melódico con baladas inolvidables.",
-  generos: ["rock", "pop rock", "soft rock"]
+  generos: ["rock", "pop rock", "soft rock"],
+  destacado: true,
 },
 {
   nombre: "Armageddon",
@@ -478,6 +481,7 @@ const productos = [
   img: "vinyl-armageddon.webp",
   artista: "Aespa",
   descripcion: "El primer álbum de estudio del grupo femenino surcoreano Aespa, lanzado en mayo de 2024. Presenta diez temas, incluyendo los dos sencillos principales: 'Supernova' y 'Armageddon'. El álbum explora su concepto futurista con géneros como el K-pop, hyperpop y electropop.",
-  generos: ["K-pop", "hyperpop", "electropop"]
+  generos: ["K-pop", "hyperpop", "electropop"],
+  destacado: true,
 }
 ]
