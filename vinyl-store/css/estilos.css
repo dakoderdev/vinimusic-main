@@ -105,6 +105,7 @@ body {
   display: inline-block;
   background: linear-gradient(135deg, #8b5cf6, #ec4899);
   color: white;
+  text-wrap: nowrap;
   padding: 0.25rem 0.75rem;
   border-radius: 0.5rem;
   font-size: 0.75rem;
