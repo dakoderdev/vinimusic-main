@@ -1,5 +1,5 @@
 const productos = [
-  const productos = [
+
   {
     nombre: "Brat",
     precio: 125000,
@@ -400,4 +400,77 @@ const productos = [
       "Obra fundamental del rock argentino (1986). De tono político y oscuro, con clásicos como 'Ji Ji Ji' y 'Motor Psico'.",
     generos: ["rock argentino", "post-punk", "alternativo"]
   },
+  {
+  nombre: "Songs From The Big Chair",
+  precio: 112000,
+  img: "vinyl-songsbigchair.webp",
+  artista: "Tears for Fears",
+  descripcion:
+    "Publicado en 1985, este clásico del synth-pop británico incluye himnos como 'Everybody Wants to Rule the World' y 'Shout'. Una obra maestra que combina emoción, producción impecable y crítica social.",
+  generos: ["synth-pop", "new wave", "pop rock"]
+},
+{
+  nombre: "Stand By Me",
+  precio: 109000,
+  img: "vinyl-standbyme.jpg",
+  artista: "Ben E. King",
+  descripcion:
+    "Lanzado en 1961, este álbum es un ícono del soul y el R&B. Su tema homónimo, 'Stand By Me', es una de las canciones más emblemáticas del siglo XX, símbolo de amor, esperanza y unidad.",
+  generos: ["soul", "R&B", "pop clásico"]
+},
+{
+  nombre: "Creedence Clearwater Revival",
+  precio: 118000,
+  img: "vinyl-creedence.webp",
+  artista: "Creedence Clearwater Revival",
+  descripcion:
+    "El debut homónimo de 1968 que presentó al mundo el sonido swamp rock de CCR. Incluye la legendaria 'Suzie Q' y anticipa el estilo sureño y crudo que los haría inmortales.",
+  generos: ["rock clásico", "southern rock", "blues rock"]
+},
+{
+  nombre: "Sticky Fingers",
+  precio: 120000,
+  img: "vinyl-stickyfingers.webp",
+  artista: "The Rolling Stones",
+  descripcion:
+    "Publicado en 1971, es una de las cumbres de los Stones. Mezcla rock, blues y country con una energía sensual y rebelde. Contiene clásicos como 'Brown Sugar' y 'Wild Horses'.",
+  generos: ["rock", "blues rock", "hard rock"]
+},
+{
+  nombre: "Money for Nothing",
+  precio: 114000,
+  img: "vinyl-moneyfornothing.webp",
+  artista: "Dire Straits",
+  descripcion:
+    "Compilado de 1988 que reúne los grandes éxitos de Dire Straits, incluyendo 'Sultans of Swing' y 'Money for Nothing'. Sonido limpio, guitarras brillantes y elegancia británica en su máxima expresión.",
+  generos: ["rock", "soft rock", "pop rock"]
+},
+{
+  nombre: "Dynasty",
+  precio: 110000,
+  img: "vinyl-dinasty.jpg",
+  artista: "Kiss",
+  descripcion:
+    "Álbum de 1979 donde Kiss incorporó el disco rock a su estilo característico. Con himnos como 'I Was Made for Lovin’ You', marcó una nueva era para la banda entre el exceso y la melodía.",
+  generos: ["hard rock", "glam rock", "disco rock"]
+},
+{
+  nombre: "Live",
+  precio: 115000,
+  img: "vinyl-live.webp",
+  artista: "AC/DC",
+  descripcion:
+    "Grabado en 1992, captura toda la potencia en vivo de AC/DC. Una descarga de energía pura con clásicos como 'Thunderstruck', 'Back in Black' y 'Highway to Hell'.",
+  generos: ["hard rock", "rock and roll", "live"]
+},
+{
+  nombre: "Reckless",
+  precio: 108000,
+  img: "vinyl-reckless.webp",
+  artista: "Bryan Adams",
+  descripcion:
+    "Álbum de 1984 que consolidó a Bryan Adams como estrella global. Con temas como 'Summerof '69' y 'Heaven', mezcla rock melódico con baladas inolvidables.",
+  generos: ["rock", "pop rock", "soft rock"]
+},
+
 ]
